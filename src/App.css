@@ -1,0 +1,145 @@
+:root {
+  --radius: 16px;
+  --border: 1px solid #ccc;
+  --font-size: clamp(0.75rem, 0.75vw, 1.5rem);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  font-size: var(--font-size);
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  background-color: #f9f9f9;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%);
+  flex-direction: column;
+  height: 60vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  width: 25vw;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  width: 100%;
+  height: 100vh;
+}
+h1 {
+  font-size: calc(var(--font-size) * 2);
+  text-align: center;
+}
+
+.login,
+.logout {
+  border: var(--border);
+  border-radius: var(--radius);
+  margin: 2rem;
+  padding: 0.5rem 1.5rem;
+  transition: 0.25s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+form {
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+form button {
+  background-color: #fff;
+  border: var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: calc(var(--font-size) * 1.5);
+  transition: 0.25s;
+  width: 25%;
+  padding: 0.5rem 1rem;
+}
+
+form input {
+  all: unset;
+  background-color: #fff;
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 0 1rem;
+  width: 60%;
+}
+
+.messages {
+  align-items: center;
+  background-color: #fff;
+  border: var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column-reverse;
+  height: 90%;
+  overflow-y: auto;
+  padding: 1rem;
+  width: 100%;
+}
+
+button:hover {
+  background-color: green;
+  color: white;
+}
+.login:hover {
+  background-color: green;
+  color: white;
+}
+.logout:hover {
+  background-color: red;
+  color: white;
+}
+
+.recieved,
+.sent {
+  align-items: center;
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.sent {
+  align-self: flex-end;
+  flex-direction: row;
+}
+.recieved {
+  align-self: flex-start;
+  flex-direction: row-reverse;
+}
+
+.recieved img,
+.sent img {
+  border-radius: 50%;
+  height: 2rem;
+}
+.recieved img {
+  margin: 0 0.5rem;
+}
+.sent p,
+.recieved p {
+  background-color: teal;
+  margin-right: 0.5rem;
+}
+
+.recieved p,
+.sent p {
+  border-radius: var(--radius);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
